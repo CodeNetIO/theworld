@@ -26,7 +26,7 @@ input[type=text], input[type=password], textarea {
     padding: 8px 5px;
     position: fixed;
     bottom: 0;
-    width: 100%
+    width: 100%;
 }
 
 .headshot {
@@ -43,9 +43,13 @@ input[type=text], input[type=password], textarea {
         list-style-type: none;
     }
 
-    .menu li.active {
-        font-weight: bold;
-    }
+        .menu li.active {
+            font-weight: bold;
+        }
+
+        .menu li a {
+            color: #eee;
+        }
 
 #sidebar {
     background: #2a3c36;
@@ -56,8 +60,32 @@ input[type=text], input[type=password], textarea {
     overflow: hidden;
     left: 0;
     margin: 0;
+    -moz-transition: left ease .25s;
+    -o-transition: left ease .25s;
+    -webkit-transition: left ease .25s;
+    transition: left ease .25s;
 }
+
+    #sidebar.hide-sidebar {
+        left: -250px;
+        -moz-transition: left ease .25s;
+        -o-transition: left ease .25s;
+        -webkit-transition: left ease .25s;
+        transition: left ease .25s;
+    }
 
 #wrapper {
     margin: 0 0 0 250px;
+    -moz-transition: margin-left ease .25s;
+    -o-transition: margin-left ease .25s;
+    -webkit-transition: margin-left ease .25s;
+    transition: margin-left ease .25s;
 }
+
+    #wrapper.hide-sidebar {
+        margin-left: 0;
+        -moz-transition: margin-left ease .25s;
+        -o-transition: margin-left ease .25s;
+        -webkit-transition: margin-left ease .25s;
+        transition: margin-left ease .25s;
+    }
